@@ -34,16 +34,15 @@
                 <input class="form-control" asp-for="City">
                 <span asp-validation-for="City" class="field-validation-error"></span>
             </div>
-            
-            
+
+
             <div class="form-group">
                 <label asp-for="CountryId">Country </label>
-                <select asp-for="CountryId" asp-items="@Model.Countries" >
-
+                <select asp-for="CountryId" asp-items="@Model.Countries">
                 </select>
                 <span asp-validation-for="CountryId" class="field-validation-error"></span>
             </div>
-            
+
 
             <div class="form-group">
                 <label asp-for="Salary">Lön</label>
@@ -55,10 +54,16 @@
                 <input class="form-control" asp-for="CarCount">
                 <span asp-validation-for="CarCount" class="field-validation-error"></span>
             </div>
-        
+
             <button type="submit" class="btn">Save</button>
         </form>
 
 
     </div>
 </div>
+
+@section Scripts
+{
+    <partial name="Shared/_ValidationScriptsPartial" />
+}
+

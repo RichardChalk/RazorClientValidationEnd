@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
+using RazorClientValidationEnd.Infrastructure.Validation;
 using SkysFormsDemo.Data;
 using SkysFormsDemo.Services;
 
@@ -32,6 +33,7 @@ namespace SkysFormsDemo.Pages.Person
 
 
         [Range(0, 100)]
+        [GoodNumber]
         public int CarCount { get; set; } //Krysta fram ett int-usecase
 
         [StringLength(50)]
